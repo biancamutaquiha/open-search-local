@@ -8,7 +8,6 @@ This project provides a local development environment using [OpenSearch](https:/
 
 - Docker
 - Docker Compose
-- Node.js (if using the example client)
 
 ---
 
@@ -40,13 +39,21 @@ curl http://localhost:9200
 
 You should receive a JSON response like:
 
+```json
 {
   "name": "opensearch",
   "cluster_name": "opensearch-cluster",
-  "cluster_uuid": "...",
+  "cluster_uuid": "xyz123abc456",
   "version": {
     "number": "2.14.0",
-    ...
+    "build_type": "tar",
+    "build_hash": "abcdef123456",
+    "build_date": "2024-03-10T00:00:00Z",
+    "build_snapshot": false,
+    "lucene_version": "9.7.0",
+    "minimum_wire_compatibility_version": "7.10.0",
+    "minimum_index_compatibility_version": "7.0.0"
   },
-  ...
+  "tagline": "The OpenSearch Project: https://opensearch.org/"
 }
+```
